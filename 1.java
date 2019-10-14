@@ -62,6 +62,13 @@ public class Main {
                     break;
                 case "%":
                     result = number1 % number2;
+		    break;
+                case "++a":
+                    result = number1 + 1;
+                    break;
+                case "--a":
+                    result = number1 - 1;
+                    break;
 
                 default:
                     System.out.println("Операция не распознана. Повторите ввод.");
