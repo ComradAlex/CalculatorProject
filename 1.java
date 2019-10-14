@@ -1,6 +1,3 @@
-import java.util.Scanner;
-import java.lang.Math;
-
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
@@ -61,6 +58,10 @@ public class Main {
                 case "abs":
                     result = Math.abs(number1);
                     break;
+                case "%":
+                    result = number1 % number2;
+                    break;
+
 
                 default:
                     System.out.println("Операция не распознана. Повторите ввод.");
@@ -70,4 +71,3 @@ public class Main {
         }
     }
 }
-
