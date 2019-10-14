@@ -70,8 +70,10 @@ public class Main {
 		case "--a":
                     result = number1 - 1;
                     break;
-
-
+		case "^":
+                    result = (int)Math.pow(number1, number2);
+                    break;
+		
                 default:
                     System.out.println("Операция не распознана. Повторите ввод.");
                     result = calculate(number1, number2, GettingSymbols.getOperation());
@@ -79,4 +81,4 @@ public class Main {
             return result;
         }
     }
-}
+
