@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
@@ -6,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int number1 = GettingSymbols.getInt();
         int number2 = GettingSymbols.getInt();
-        char operation = GettingSymbols.getOperation();
+        String operation = GettingSymbols.getOperation();
         int result = Calculations.calculate(number1,number2,operation);
         System.out.println("Результат операции: "+result);
     }
@@ -26,11 +27,11 @@ public class Main {
             return num;
         }
 
-        public static char getOperation() {
+        public static String getOperation() {
             System.out.println("Введите операцию:");
-            char operation;
+            String operation;
             if (scanner.hasNext()) {
-                operation = scanner.next().charAt(0);
+                operation = scanner.next();
             } else {
                 System.out.println("Неверно введена операция. Повторите попытку.");
                 scanner.next();
@@ -42,21 +43,25 @@ public class Main {
 
     public static class Calculations {
 
-        public static int calculate(int number1, int number2, char operation) {
+        public static int calculate(int number1, int number2, String operation) {
             int result;
             switch (operation) {
-                case '+':
+                case "+":
                     result = number1 + number2;
                     break;
-                case '-':
+                case "-":
                     result = number1 - number2;
                     break;
-                case '*':
+                case "*":
                     result = number1 * number2;
                     break;
-                case '/':
+                case "/":
                     result = number1 / number2;
                     break;
+                case "abs":
+                    result = Math.abs(number1);
+                    break;
+
                 default:
                     System.out.println("Операция не распознана. Повторите ввод.");
                     result = calculate(number1, number2, GettingSymbols.getOperation());
