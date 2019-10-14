@@ -57,6 +57,12 @@ public class Main {
                 case '/':
                     result = number1 / number2;
                     break;
+		case "abs":
+                    result = Math.abs(number1);
+                    break;
+                case "%":
+                    result = number1 % number2;
+
                 default:
                     System.out.println("Операция не распознана. Повторите ввод.");
                     result = calculate(number1, number2, GettingSymbols.getOperation());
