@@ -67,6 +67,9 @@ public class Main {
                 case "++a":
                     result = number1 + 1;
                     break;
+		case "--a":
+                    result = number1 - 1;
+                    break;
 
 
                 default:
