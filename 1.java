@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.lang.Math;
+
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
@@ -60,6 +63,9 @@ public class Main {
                     break;
                 case "%":
                     result = number1 % number2;
+                    break;
+                case "++a":
+                    result = number1 + 1;
                     break;
 
 
