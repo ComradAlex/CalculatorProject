@@ -1,0 +1,6 @@
+[submodule "checkFiles"]
+	path = checkFiles
+	url = https://github.com/PluginsOCSInventory-NG/checkFiles
+[submodule "py-checkfiletype"]
+	path = py-checkfiletype
+	url = https://github.com/Axinmaral/py-checkfiletype
