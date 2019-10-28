@@ -8,18 +8,18 @@ public class Main {
         int number2 = GettingSymbols.getInt();
         char operation = GettingSymbols.getOperation();
         int result = Calculations.calculate(number1,number2,operation);
-        System.out.println("Результат операции: "+result);
+        System.out.println("Result of calculations: "+result);
     }
 
     private static class GettingSymbols {
 
         public static int getInt() {
-            System.out.println("Введите число:");
+            System.out.println("Enter the number:");
             int num;
             if (scanner.hasNextInt()) {
                 num = scanner.nextInt();
             } else {
-                System.out.println("Неверно введено число. Попробуйте ещё раз");
+                System.out.println("The number is incorrect. Try again");
                 scanner.next();
                 num = getInt();
             }
@@ -27,12 +27,12 @@ public class Main {
         }
 
         public static char getOperation() {
-            System.out.println("Введите операцию:");
+            System.out.println("Enter the operation:");
             char operation;
             if (scanner.hasNext()) {
                 operation = scanner.next().charAt(0);
             } else {
-                System.out.println("Неверно введена операция. Повторите попытку.");
+                System.out.println("The operation is incorrect. Try again.");
                 scanner.next();
                 operation = getOperation();
             }
@@ -58,7 +58,7 @@ public class Main {
                     result = number1 / number2;
                     break;
                 default:
-                    System.out.println("Операция не распознана. Повторите ввод.");
+                    System.out.println("Operation is incorrect. Try again.");
                     result = calculate(number1, number2, GettingSymbols.getOperation());
             }
             return result;
