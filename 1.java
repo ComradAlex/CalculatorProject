@@ -19,7 +19,7 @@ public class Main {
             if (scanner.hasNextInt()) {
                 num = scanner.nextInt();
             } else {
-                System.out.println("Неверно введено число. Повторите попытку.");
+                System.out.println("Неверно введено число. Попробуйте ещё раз");
                 scanner.next();
                 num = getInt();
             }
